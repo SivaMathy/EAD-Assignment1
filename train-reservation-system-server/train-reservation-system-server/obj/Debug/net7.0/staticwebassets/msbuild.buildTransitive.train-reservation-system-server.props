@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\train-reservation-system-server.props" />
-</Project>
