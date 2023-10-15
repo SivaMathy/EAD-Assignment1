@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Img1 from "../m_img/img2.png";
-import Img2 from "../m_img/train.png"
-import Img3 from "../m_img/user.png"
+import Img2 from "../m_img/ticket.png"
+import Img3 from "../m_img/new-ticket.png"
 export default function Signin() {
   return (
     <>
@@ -21,7 +21,7 @@ export default function Signin() {
               <div style={{ paddingLeft: "50px" }}>
                 <div style={{ paddingLeft: "50px" }}>
                   <h1 className="p-3 text-4xl font-bold">
-                    <span style={{ color: "#1B998B" }}>Admin </span>
+                    <span style={{ color: "#1B998B" }}>Agent </span>
                     <span style={{ color: "#11468F" }}>DashBoard</span>
                   </h1>
                  <br/><br/>
@@ -49,16 +49,16 @@ export default function Signin() {
                           >
                             <img
                               class="d-block w-100"
-                              src={Img2}
+                              src={Img3}
                               alt="First slide"
                               style={{
                                 height: "80px",
-                                width: "100px",
-                                paddingLeft:"20px"
+                                width: "80px",
+                                paddingLeft:"20px",
                               }}
                             ></img>
                           
-                            <h2 style={{paddingRight:"60px"}}>Manage Trains</h2>
+                            <h2 style={{paddingRight:"60px"}}>Add Reservation</h2>
                           </a>
                           <i className="bi bi-box-arrow-in-right"></i>
                         </button>
@@ -83,20 +83,20 @@ export default function Signin() {
                         >
                           <a
                             className="text-decoration-none text-dark "
-                            href="/user"
+                            href="/programs"
                           >
                             <img
                               class="d-block w-100"
-                              src={Img3}
+                              src={Img2}
                               alt="First slide"
                               style={{
-                                height: "80px",
+                                height: "100px",
                                 width: "100px",
                                 paddingLeft:"20px"
                               }}
                             ></img>
                           
-                            <h2 style={{paddingRight:"60px"}}>Manage Agents</h2>
+                            <h2 style={{paddingRight:"60px"}}>View Reservation</h2>
                           </a>
                           <i className="bi bi-box-arrow-in-right"></i>
                         </button>

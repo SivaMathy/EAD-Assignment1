@@ -19,7 +19,7 @@ function EditUser(props) {
     function () {
       async function updateCrud() {
         try {
-          const response = await axios.get(`http://localhost:5144/api/User/${id}`);
+          const response = await axios.get(`http://localhost:5273/api/User/${id}`);
           setUser(response.data);
         } catch (error) {
           console.log(error);
@@ -35,7 +35,7 @@ function EditUser(props) {
     event.preventDefault();
     async function updateCrud() {
       try {
-        await axios.put(`http://localhost:5144/api/User/${id}`, user);
+        await axios.put(`http://localhost:5273/api/User/${id}`, user);
         window.location.href = `/user`;
       } catch (error) {
         console.log(error);
@@ -64,9 +64,9 @@ function EditUser(props) {
             <div className="flex content-center items-center justify-center h-full">
               <div className="w-full lg:w-5/12 px-4">
                 <div style={{ paddingLeft: "220px" }}>
-                  <h1 className="p-3 text-4xl font-bold">
-                    <span style={{ color: "#FF0000" }}>Red</span>
-                    <span style={{ color: "#11468F" }}>Rails</span>
+                <h1 className="p-3 text-4xl font-bold">
+                    <span style={{ color: "#1B998B" }}>Mates</span>
+                    <span style={{ color: "#11468F" }}>Travels</span>
                   </h1>
                 </div>
                 <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300 border-0">
