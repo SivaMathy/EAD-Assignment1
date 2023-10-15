@@ -7,6 +7,7 @@ const entry = {
     route:"",
     date:new Date(),
     time:"",
+    isReserved:false,
     isAvailable:false,
     
     };
@@ -16,6 +17,7 @@ export default function Edit (props)
     const [type,setType]=useState(0);
     const [tid,setTid]=useState("");
     const [isAvailable,setIsAvailable]=useState(false);
+    const [isReserved,setIsReserved]=useState(false);
     const updateTrain =()=>{
         console.log("The New Train Is: ",entry)
 
@@ -47,6 +49,11 @@ export default function Edit (props)
             setIsAvailable(v_)
         
         }
+        if(name_ === "isReserved"){
+          v_ = v_ === "true"
+          setIsReserved(v_)
+      
+      }
         entry[name_] = v_
        
     };
@@ -61,6 +68,7 @@ export default function Edit (props)
             console.log("Train for update: ",d)
             setType(d.type)
             setIsAvailable(d.isAvailable)
+            setIsReserved(d.isReserved)
             setData(d) 
             Object.assign(entry, d)
         }).catch(e=>console.log("Error getting train for update: ",e))
@@ -110,6 +118,16 @@ return (
         </div>
         <div className="input-container">
               <label htmlFor="av">
+                <i className="fas fa-subway"></i> Reservations
+              </label>
+              <select name="isReserved" id="av" value={isReserved} onChange={newData}>
+                <option value="true">Reserved</option>
+                <option value="false">Not Reserved</option>
+                </select>
+
+        </div>
+        <div className="input-container">
+              <label htmlFor="av">
                 <i className="fas fa-subway"></i> Availability
               </label>
               <select name="isAvailable" id="av" value={isAvailable} onChange={newData}>
@@ -117,7 +135,7 @@ return (
                 <option value="false">Cancelled</option>
                 </select>
 
-            </div>
+        </div>
         <div className="button-container">
           <div className="btn cancel" onClick={() => (window.location = "/")}>
             Cancel

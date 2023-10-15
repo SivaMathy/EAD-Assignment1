@@ -62,6 +62,19 @@ const deleteIcon = (
   const deleteTrain =()=> {
     // console.log("The train id: ",tid)
     // return
+    const trainToDelete = trains.find((train) => train.id === tid);
+
+  if (trainToDelete && trainToDelete.isReserved) {
+    // If the train is reserved, show a confirmation dialog to the user
+    const confirmed = window.alert(
+      "This train is reserved. You can't delete this train"
+    );
+
+    if (!confirmed) {
+      // User canceled the operation, do nothing
+      return;
+    }
+  }
     fetch("api/train/" + tid, {
       method:"DELETE",
       
@@ -97,6 +110,7 @@ return (
           <th className="header-cell">Route</th>
           <th className="header-cell">Date</th>
           <th className="header-cell">Time</th>
+          <th className="header-cell">Reservations</th>
           <th className="header-cell">Availablility</th>
           <th className="header-cell">Edit</th>
           <th className="header-cell">Delete</th>
@@ -121,6 +135,11 @@ return (
               <td>{train.route}</td>
               <td>{train.date.split("T")[0]}</td>
               <td>{train.time}</td>
+              <td>
+                
+                  {train.isReserved ? 'Reserved' : 'Not Reserved'}
+          
+              </td>
               <td>
                 <span className={`status-text ${train.isAvailable ? 'Available' : 'cancelled'}`}>
                   {train.isAvailable ? 'Available' : 'Cancelled'}
