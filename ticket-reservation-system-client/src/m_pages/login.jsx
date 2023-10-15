@@ -32,7 +32,7 @@ export default class Login extends Component {
 
     console.log(data);
 
-    axios.post("http://localhost:5144/api/User/login", data)
+    axios.post("http://localhost:5273/api/User/login", data)
     .then((res) => {
       if (res.status === 200) {
         const token = res.data.token;
@@ -47,9 +47,9 @@ export default class Login extends Component {
         alert("Authenticated Successfully");
         if(decodedToken.Status === "Active"){
           if (decodedToken.Role === "Admin") {
-            window.location.href = '/home';
+            window.location.href = '/admin';
           } else {
-            window.location.href = '/user';
+            window.location.href = '/agent';
           } 
         }else{
           alert("Sorry Your Accout has been Deactivated")

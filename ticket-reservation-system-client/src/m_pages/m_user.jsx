@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Users(peoples) {
 
   useEffect(() => {
-    axios.get("http://localhost:5144/api/User")
+    axios.get("http://localhost:5273/api/User")
       .then((response) => {
         setData(response.data);
       })
@@ -23,7 +23,7 @@ export default function Users(peoples) {
   
     // Make an API call to update the status
     axios
-      .put(`http://localhost:5144/api/User/${personId}`, {
+      .put(`http://localhost:5273/api/User/${personId}`, {
         status: newStatus,
         name: person.name,
         id:person.id,

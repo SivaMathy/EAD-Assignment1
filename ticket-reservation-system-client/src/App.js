@@ -9,6 +9,7 @@ import AddUser from "./m_pages/m_adduser"
 import NavBar from "./m_pages/navBar"
 import AdminDash from "./m_pages/admin-dash"
 import EditUser from "./m_pages/m_editUser";
+import AgentDashboard from "./m_pages/agent-dash";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/nav" element={<NavBar/>}/>
         <Route path="/admin" element={<AdminDash/>}/>
         <Route path="/editUser/:id" element={<EditUser/>}/>
+        <Route path="/agent" element={<AgentDashboard/>}/>
 
 
       </Routes>
