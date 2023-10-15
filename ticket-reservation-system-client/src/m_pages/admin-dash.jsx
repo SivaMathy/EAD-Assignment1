@@ -44,7 +44,7 @@ export default function Signin() {
                         >
                           <a
                             className="text-decoration-none text-dark "
-                            href="/programs"
+                            href="/home"
                             style={{border:"1 border-style: solid;"}}
                           >
                             <img
