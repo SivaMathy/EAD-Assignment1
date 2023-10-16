@@ -32,7 +32,7 @@ export default class Login extends Component {
 
     console.log(data);
 
-    axios.post("http://localhost:88/api/User/login", data)
+    axios.post("http://192.168.8.164:88/api/User/login", data)
     .then((res) => {
       if (res.status === 200) {
         const token = res.data.token;
