@@ -15,7 +15,7 @@ const entry = {
       const addNewTrain =()=>{
           console.log("The New Train Is: ",entry)
   
-          fetch("api/train", {
+          fetch("http://localhost:85/api/train", {
               method:"POST",
               body: JSON.stringify(entry),
               headers:{

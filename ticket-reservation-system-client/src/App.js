@@ -14,6 +14,11 @@ import TicketEdit from "./T_pages/TicketEdit";
 import TicketHome from "./T_pages/TicketHome";
 import TicketNew from "./T_pages/TicketNew";
 
+import New from "./components/New";
+import Home from "./components/Home";
+import Edit from "./components/Edit";
+import './custom.css';
+
 function App() {
   return (
     <BrowserRouter>
@@ -30,6 +35,10 @@ function App() {
         <Route path="/tic" element={<TicketHome />} />
         <Route path="/New" element={<TicketNew />} />
         <Route path="/Edit" element={<TicketEdit />} />
+
+        <Route path="/pnew" element={<New />} />
+        <Route path="/phome" element={<Home />} />
+        <Route path="/pedit" element={<Edit />} />
       </Routes>
     </BrowserRouter>
   );

@@ -21,7 +21,7 @@ export default function Edit (props)
     const updateTrain =()=>{
         console.log("The New Train Is: ",entry)
 
-        fetch("api/train/" + tid, {
+        fetch("http://localhost:85/api/train/" + tid, {
             method:"PUT",
             body: JSON.stringify(entry),
             headers:{
@@ -29,7 +29,7 @@ export default function Edit (props)
             }
         }).then(r=> {
             console.log("Response from update a  train: ",r)
-            window.location="/"
+            window.location="/phome"
         }).catch(e=>console.log("error updating a train: ",e))
     };
     const newData = (e)=> {
@@ -64,7 +64,7 @@ export default function Edit (props)
         }
         if(id_){
             setTid(id_)
-        fetch("api/train/" + id_).then(r=> r.json()).then(d=>{
+        fetch("http://localhost:85/api/train/" + id_).then(r=> r.json()).then(d=>{
             console.log("Train for update: ",d)
             setType(d.type)
             setIsAvailable(d.isAvailable)
