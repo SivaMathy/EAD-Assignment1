@@ -1,37 +1,37 @@
 
-table,
-tr,
-th,
-td {
+.ptable,
+.ptr,
+.pth,
+.ptd {
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
   background-color: white;
 }
 
-table {
+.ptable {
   width: 90%;
   margin-top: 50px;
   margin-left: 50px;
 }
 
-td {
+.ptd {
   padding: 5px;
 }
 
-th {
+.pth {
   padding: 9px 15px;
   font-weight: bold;
   background-color: black; /* Set the header background color to black */
   color: white; /* Set text color to white in the header */
 }
 
-.header-cell {
+.pheader-cell {
   background-color: black; /* Set the header cell background color to black */
 
 }
 
-.edit-button {
+.pedit-button {
   background-color: #1B998B; /* Set edit button background color to green */
   color: white; /* Set text color to white in edit button */
   padding: 5px 10px; /* Add some padding to the button */
@@ -40,16 +40,16 @@ th {
   display: inline-block;
 }
 
-.delete-button {
+.pdelete-button {
   background-color: red; /* Set delete button background color to red */
   color: white; /* Set text color to white in delete button */
-  padding: 5px 10px; /* Add some padding to the button */
+  padding: 10px 10px; /* Add some padding to the button */
   cursor: pointer; /* Change cursor to pointer on hover */
   border-radius: 4px; /* Add rounded corners to the button */
   display: inline-block;
   margin-top: 3px;
 }
-.centered-heading {
+.pcentered-heading {
   text-align: center; /* Center the text horizontally */
   color: darkblue; /* Set the text color to dark blue */
   margin-top: 20px; 
@@ -58,7 +58,7 @@ th {
 }
 
 
-.centered-form {
+.pcentered-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@ th {
   
 }
 
-.form-container {
+.pform-container {
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 10px;
@@ -77,7 +77,7 @@ th {
   width: 100%;
 }
 
-h1 {
+.ph1 {
   text-align: center;
   color: darkblue;
   font-size: 30px;
@@ -85,18 +85,18 @@ h1 {
  
 }
 
-.input-container {
+.pinput-container {
   margin-top: 10px;
 }
 
-label {
+.plabel {
   font-weight: bold;
   display: flex;
   align-items: center;
 }
 
-input,
-select {
+.pinput,
+.pselect {
   width: 100%;
   padding: 5px;
   border: none;
@@ -104,13 +104,13 @@ select {
   outline: none;
 }
 
-.button-container {
+.pbutton-container {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
 
-.btn {
+.pbtn {
   flex: 1;
   padding: 10px;
   text-align: center;
@@ -120,30 +120,30 @@ select {
 
 }
 
-.btn.cancel {
+.pbtn.cancel {
   background-color: red;
   color: white;
 }
 
-.btn.delete {
+.pbtn.delete {
   background-color: #11468F;
   color: white;
  
 }
 
-.btn.add {
+.pbtn.add {
   background-color: #11468F;
   color: white;
 }
 
-  .btn.update {
+  .pbtn.update {
     background-color: #11468F;
     color: white;
 
   }
 
   
-  .delete-modal{
+  .pdelete-modal{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -156,16 +156,16 @@ select {
     align-items: center;
 
   }
-  .modal-item{
+  .pmodal-item{
     background-color: white;
     padding: 10px 15px 15px 15px;
     border-radius: 9px;
 
   }
-  .waiting{
+  .pwaiting{
     cursor: wait;
   }
-  .loading{
+  .ploading{
     font-weight: bold;
     animation-name: load;
     animation-duration: 0.5s;
@@ -185,11 +185,11 @@ select {
       width: 15px;
     }
   }
-  .hidden{
+  .phidden{
     display: none;
   }
 
-  .add-train-button {
+  .padd-train-button {
     display: inline-block;
     background-color: #11468F; /* Dark blue color for the button */
     color: white; /* Text color for the button */
@@ -202,30 +202,30 @@ select {
     float: right;
     margin-right: 40px; /* Align the button to the right */
   }
-.add-train-button i {
+.padd-train-button i {
   margin-right: 5px; /* Space between icon and text */
 }
 
-.add-train-button:hover {
+.padd-train-button:hover {
   background-color: #14776A; /* Darker shade when hovered */
 }
 
 /* Icon Styles (Font Awesome) */
-.fa-plus {
+.pfa-plus {
   font-size: 20px; /* Adjust the icon size as needed */
 }
 /* Add these styles to your CSS */
-.status-text {
+.pstatus-text {
   padding: 5px; /* Adjust the padding to control the background width and height */
   background-color: green; /* Default background color for the text */
   color: white; /* Text color for better contrast */
 }
 
-.cancelled {
+.pcancelled {
   background-color: red; /* Background color for 'Cancelled' text */
 }
 /* Navbar styles */
-.navbar {
+.pnavbar {
   background-color: #178377;
   padding: 0px 0;
   margin: 0;
@@ -238,23 +238,23 @@ select {
 
 }
 
-.navbar-logo {
+.pnavbar-logo {
   display: flex;
   align-items: center;
 }
 
-.navbar-logo img {
+.pnavbar-logo img {
   margin-right: 8px;
 }
 
-.navbar-logo-text {
+.pnavbar-logo-text {
   color: white;
   font-size: 24px;
   font-weight: bold;
 }
 
 
-.container {
+.pcontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -263,29 +263,29 @@ select {
   padding: 0 20px;
 }
 
-.navbar-logo img {
+.pnavbar-logo img {
   width: 120px;
   height: 90px;
 }
 
-.navbar-list {
+.pnavbar-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.navbar-item {
+.pnavbar-item {
   margin-right: 20px;
 }
 
-.navbar-item:last-child {
+.pnavbar-item:last-child {
   margin-right: 0;
 }
 
 /* Add your custom CSS styles here */
 
-.navbar-link {
+.pnavbar-link {
   color: #eaedf1; /* Change the link color */
   text-decoration: none;
   font-weight: bold;
@@ -296,12 +296,12 @@ select {
   transition: background-color 0.3s ease; /* Add a transition for smooth hover effect */
 }
 
-.navbar-link:hover {
+.pnavbar-link:hover {
   background-color: #126b58; /* Change to the desired hover background color */
   color: #fff; /* Change the text color on hover */
 }
 
-.login-button {
+.plogin-button {
   background-color: #0D5E6B; /* Change the button background color */
   color: white;
   padding: 8px 16px;
@@ -310,6 +310,6 @@ select {
   transition: background-color 0.3s;
 }
 
-.login-button:hover {
+.plogin-button:hover {
   background-color: #1B998B; /* Darker shade when hovered */
 }

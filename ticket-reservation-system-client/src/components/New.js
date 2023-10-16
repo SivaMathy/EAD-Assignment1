@@ -51,71 +51,71 @@ const entry = {
           console.log("The New Train Is: ",entry)
       }
       return (
-          <section className="centered-form">
-            <div className="form-container">
-              <h1>Add New Train Schedule</h1>
-              <div className="input-container">
-                <label htmlFor="tn">
+          <section className="pcentered-form">
+            <div className="pform-container">
+              <h1 className='ph1'>Add New Train Schedule</h1>
+              <div className="pinput-container">
+                <label htmlFor="tn" className='plabel'>
                   <i className="fas fa-train"></i> Train Name
                 </label>
-                <input type="text" name="trainName" id="tn" onChange={newData} />
+                <input type="text" name="trainName" id="tn" onChange={newData} className='pinput'/>
               </div>
-              <div className="input-container">
-                <label htmlFor="tnu">
+              <div className="pinput-container">
+                <label htmlFor="tnu" className='plabel'>
                   <i className="fas fa-hashtag"></i> Train Number
                 </label>
-                <input type="text" name="trainNumber" id="tnu" onChange={newData} />
+                <input type="text" name="trainNumber" id="tnu" onChange={newData} className='pinput'/>
               </div>
-              <div className="input-container">
-                <label htmlFor="ty">
+              <div className="pinput-container">
+                <label htmlFor="ty" className='plabel'>
                   <i className="fas fa-subway"></i> Type
                 </label>
-                <select name="type" id="ty" onChange={newData}>
+                <select name="type" id="ty" onChange={newData} className='pselect'>
                   <option value={1}>Intercity Train</option>
                   <option value={0}>Express Train</option>
                 </select>
               </div>
-              <div className="input-container">
-                <label htmlFor="ro">
+              <div className="pinput-container">
+                <label htmlFor="ro" className='plabel'>
                   <i className="fas fa-route"></i> Route
                 </label>
-                <input type="text" name="route" id="ro" onChange={newData} />
+                <input type="text" name="route" id="ro" onChange={newData} className='pinput'/>
               </div>
-              <div className="input-container">
-                <label htmlFor="da">
+              <div className="pinput-container">
+                <label htmlFor="da" className='plabel'>
                   <i className="far fa-calendar-alt"></i>Date
                 </label>
-                <input type="date" name="date" id="da" onChange={newData} />
+                <input type="date" name="date" id="da" onChange={newData} className='pinput'/>
               </div>
-              <div className="input-container">
-                <label htmlFor="ti">
+              <div className="pinput-container">
+                <label htmlFor="ti" className='plabel'>
                   <i className="far fa-clock"></i> Time
                 </label>
-                <input type="text" name="time" id="ti" onChange={newData} />
+                <input type="text" name="time" id="ti" onChange={newData} className='pinput'/>
               </div>
-              <div className="input-container">
-                <label htmlFor="av">
+              <div className="pinput-container">
+                <label htmlFor="av" className='plabel'>
                   <i className="fas fa-subway"></i> Reservations
                 </label>
-                <select name="isReserved" id="av" onChange={newData}>
+                <select name="isReserved" id="av" onChange={newData} className='pselect'>
                   <option value="true">Reserved</option>
                   <option value="false">Not Reserved</option>
                 </select>
               </div>
-              <div className="input-container">
+              <div className="pinput-container">
                 <label htmlFor="av">
                   <i className="fas fa-subway"></i> Availability
                 </label>
-                <select name="isAvailable" id="av" onChange={newData}>
+                <select name="isAvailable" id="av" onChange={newData} className='pselect'>
                   <option value="true">Available</option>
                   <option value="false">Cancelled</option>
                 </select>
               </div>
-              <div className="button-container">
-                <div className="btn cancel" onClick={() => (window.location = "/phome")}>
+              <div className="pbutton-container">
+                <div className="pbtn cancel" onClick={() => (window.location = "/phome")}>
                   Cancel
                 </div>
-                <div className="btn add" onClick={addNewTrain}>
+                <div className="pbtn add" onClick={addNewTrain}>
                   Add
                 </div>
               </div>

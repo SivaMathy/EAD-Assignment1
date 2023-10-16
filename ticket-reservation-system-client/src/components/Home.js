@@ -96,61 +96,61 @@ const deleteIcon = (
 
 return (
   <main>
-    <h1 className="centered-heading">Schedule Train Details</h1>
-    <a href="/pnew" className="add-train-button">
+    <h1 className="pcentered-heading">Schedule Train Details</h1>
+    <a href="/pnew" className="padd-train-button">
       <i className="fas fa-plus"></i> Add Train
     </a>
 
-    <table>
+    <table className="ptable">
       <thead>
-        <tr>
-          <th className="header-cell">Train Name</th>
-          <th className="header-cell">Train Number</th>
-          <th className="header-cell">Type</th>
-          <th className="header-cell">Route</th>
-          <th className="header-cell">Date</th>
-          <th className="header-cell">Time</th>
-          <th className="header-cell">Reservations</th>
-          <th className="header-cell">Availablility</th>
-          <th className="header-cell">Edit</th>
-          <th className="header-cell">Delete</th>
+        <tr className="ptr">
+          <th className="pheader-cell pth">Train Name</th>
+          <th className="pheader-cell pth">Train Number</th>
+          <th className="pheader-cell pth">Type</th>
+          <th className="pheader-cell pth">Route</th>
+          <th className="pheader-cell pth">Date</th>
+          <th className="pheader-cell pth">Time</th>
+          <th className="pheader-cell pth">Reservations</th>
+          <th className="pheader-cell pth">Availablility</th>
+          <th className="pheader-cell pth">Edit</th>
+          <th className="pheader-cell pth">Delete</th>
         </tr>
       </thead>
       <tbody>
         {trains.length === 0 ? (
-          <tr>
-            <td colSpan="9">
-              <div className="row waiting">
+          <tr className="ptr">
+            <td colSpan="9" className="ptd">
+              <div className="row pwaiting">
                 <div>Loading</div>
-                <div className="loading">...</div>
+                <div className="ploading">...</div>
               </div>
             </td>
           </tr>
         ) : (
           trains.map((train) => (
-            <tr key={train.id}>
-              <td>{train.trainName}</td>
-              <td>{train.trainNumber}</td>
-              <td>{train.type === 0 ? "Express Train" : "Intercity Train"}</td>
-              <td>{train.route}</td>
-              <td>{train.date.split("T")[0]}</td>
-              <td>{train.time}</td>
-              <td>
+            <tr key={train.id} className="ptr">
+              <td className="ptd">{train.trainName}</td>
+              <td className="ptd">{train.trainNumber}</td>
+              <td className="ptd">{train.type === 0 ? "Express Train" : "Intercity Train"}</td>
+              <td className="ptd">{train.route}</td>
+              <td className="ptd">{train.date.split("T")[0]}</td>
+              <td className="ptd">{train.time}</td>
+              <td className="ptd">
                 
                   {train.isReserved ? 'Reserved' : 'Not Reserved'}
           
               </td>
-              <td>
-                <span className={`status-text ${train.isAvailable ? 'Available' : 'cancelled'}`}>
+              <td className="ptd">
+                <span className={`pstatus-text ${train.isAvailable ? 'Available' : 'cancelled'}`}>
                   {train.isAvailable ? 'Available' : 'Cancelled'}
                 </span>
               </td>
-              <td>
-                <a href={"/pedit?id=" + train.id} className="edit-button">
+              <td className="ptd">
+                <a href={"/pedit?id=" + train.id} className="pedit-button">
                   {editIcon} Edit
                 </a>
               </td>
-              <td onClick={() => openDeleteModal(train.id)} className="delete-button">
+              <td onClick={() => openDeleteModal(train.id)} className="pdelete-button ptd">
                 {deleteIcon} Delete
               </td>
             </tr>
@@ -158,15 +158,15 @@ return (
         )}
       </tbody>
     </table>
-    <section className="delete-modal hidden">
-      <div className="modal-item">
+    <section className="pdelete-modal phidden">
+      <div className="pmodal-item">
         <h3>Delete Train</h3>
         <p>Are you sure you want to delete this train?</p>
-        <div className="button-container">
-          <div className="btn cancel" onClick={() => handleModal(true)}>
+        <div className="pbutton-container">
+          <div className="pbtn cancel" onClick={() => handleModal(true)}>
             Cancel
           </div>
-          <div className="btn delete delete-button" onClick={deleteTrain}>
+          <div className="pbtn delete pdelete-button" onClick={deleteTrain}>
             Delete
           </div>
         </div>
