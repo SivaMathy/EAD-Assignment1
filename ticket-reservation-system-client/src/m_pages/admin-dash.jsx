@@ -54,7 +54,7 @@ export default function Signin() {
                         >
                           <a
                             className="text-decoration-none text-dark "
-                            href="/home"
+                            href="/phome"
                             style={{border:"1 border-style: solid;"}}
                           >
                             <img

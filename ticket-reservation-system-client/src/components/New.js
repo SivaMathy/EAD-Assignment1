@@ -15,7 +15,7 @@ const entry = {
       const addNewTrain =()=>{
           console.log("The New Train Is: ",entry)
   
-          fetch("api/train", {
+          fetch("http://localhost:85/api/train", {
               method:"POST",
               body: JSON.stringify(entry),
               headers:{
@@ -110,7 +110,7 @@ const entry = {
                 </select>
               </div>
               <div className="button-container">
-                <div className="btn cancel" onClick={() => (window.location = "/")}>
+                <div className="btn cancel" onClick={() => (window.location = "/phome")}>
                   Cancel
                 </div>
                 <div className="btn add" onClick={addNewTrain}>
@@ -122,3 +122,4 @@ const entry = {
         );
         
   }
+  //updated code
