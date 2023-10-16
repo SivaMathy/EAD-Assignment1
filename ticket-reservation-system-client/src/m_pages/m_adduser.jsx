@@ -98,7 +98,7 @@ export default class AddUser extends Component {
 
       console.log(data);
 
-      axios.post("http://localhost:5273/api/User", data).then((res) => {
+      axios.post("http://localhost:88/api/User", data).then((res) => {
         if (res) {
           this.setState({
             name: "",
