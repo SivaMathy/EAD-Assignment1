@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
 import Img1 from "../m_img/img2.png";
 import Img2 from "../m_img/train.png";
 import Img3 from "../m_img/user.png";

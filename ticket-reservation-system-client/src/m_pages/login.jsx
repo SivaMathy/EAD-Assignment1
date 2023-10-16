@@ -47,9 +47,9 @@ export default class Login extends Component {
         alert("Authenticated Successfully");
         if(decodedToken.Status === "Active"){
           if (decodedToken.Role === "Admin") {
-            window.location.href = '/admin';
+            window.location.href = '/dash';
           } else {
-            window.location.href = '/agent';
+            window.location.href = '/agentdash';
           } 
         }else{
           alert("Sorry Your Accout has been Deactivated")
