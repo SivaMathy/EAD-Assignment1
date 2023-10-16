@@ -92,10 +92,10 @@ export default function Signin() {
                             
                             
                           }}
-                          // onClick={() => window.location.href = `/user`}
+                          onClick={() => window.location.href = `/user`}
                         >
                           <a
-                            // className="text-decoration-none text-dark "
+                            className="text-decoration-none text-dark "
                           
                           >
                             <img
