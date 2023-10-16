@@ -54,7 +54,7 @@ th {
   color: darkblue; /* Set the text color to dark blue */
   margin-top: 20px; 
   font-weight: bolder;
-  font-size: larger;/* Add some top margin to create space */
+  font-size: 40px;/* Add some top margin to create space */
 }
 
 
@@ -73,14 +73,14 @@ th {
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
 }
 
 h1 {
   text-align: center;
   color: darkblue;
-  font-size: larger;
+  font-size: 30px;
   font-weight: bolder;
  
 }
@@ -117,6 +117,7 @@ select {
   cursor: pointer;
   border-radius: 5px;
   margin: 0 5px;
+
 }
 
 .btn.cancel {
@@ -127,6 +128,7 @@ select {
 .btn.delete {
   background-color: #11468F;
   color: white;
+ 
 }
 
 .btn.add {
@@ -137,6 +139,7 @@ select {
   .btn.update {
     background-color: #11468F;
     color: white;
+
   }
 
   
