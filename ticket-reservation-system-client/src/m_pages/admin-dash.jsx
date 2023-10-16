@@ -54,7 +54,8 @@ export default function Signin() {
                         >
                           <a
                             className="text-decoration-none text-dark "
-                            style={{ border: "1 border-style: solid;" }}
+                            href="/home"
+                            style={{border:"1 border-style: solid;"}}
                           >
                             <img
                               class="d-block w-100"
