@@ -188,7 +188,7 @@ select {
   .hidden{
     display: none;
   }
-  /* Add Train Button */
+
   .add-train-button {
     display: inline-block;
     background-color: #11468F; /* Dark blue color for the button */
