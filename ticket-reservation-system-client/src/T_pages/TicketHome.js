@@ -45,9 +45,12 @@ export default function TicketHome() {
   }, []);
   return (
     <div className="App">
-      <center>
-        <h1>Ticket Reservation</h1>
-      </center>
+      <div style={{ paddingLeft: "220px" }}>
+        <h1 className="p-3 text-4xl font-bold">
+          <span style={{ color: "#1B998B" }}>Ticket</span>
+          <span style={{ color: "#1B998B" }}>Reservation</span>
+        </h1>
+      </div>
       <div className="add-btn">
         <a href="/new">+</a>
       </div>
@@ -87,7 +90,14 @@ export default function TicketHome() {
                 <td>{student.age}</td>
                 <td>
                   {" "}
-                  <button className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline  py-3 px-4 leading-tight text-xl mt-3 ">
+                  <button
+                    className="text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                    style={{
+                      transition: "all .15s ease",
+                      background: "#1B998B",
+                      width: "150px",
+                    }}
+                  >
                     <a href={"/edit?id=" + student.id}>Edit</a>
                   </button>
                 </td>
@@ -97,7 +107,14 @@ export default function TicketHome() {
                   }}
                 >
                   {" "}
-                  <button className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline  py-3 px-4 leading-tight text-xl mt-3 ">
+                  <button
+                    className="text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                    style={{
+                      transition: "all .15s ease",
+                      background: "#1B998B",
+                      width: "150px",
+                    }}
+                  >
                     Delete
                   </button>
                 </td>
@@ -113,7 +130,12 @@ export default function TicketHome() {
           <p>Are you sure you want to Cancel this Reservation?</p>
           <div className="flex flex-wrap  mt-20 justify-btw">
             <div
-              className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline cancel"
+              className="text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+              style={{
+                transition: "all .15s ease",
+                background: "#1B998B",
+                width: "150px",
+              }}
               onClick={() => {
                 handleModal(true);
               }}
@@ -121,7 +143,12 @@ export default function TicketHome() {
               Cancel
             </div>
             <div
-              className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline add"
+              className="text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+              style={{
+                transition: "all .15s ease",
+                background: "#1B998B",
+                width: "150px",
+              }}
               onClick={deleteStudent}
             >
               Delete
