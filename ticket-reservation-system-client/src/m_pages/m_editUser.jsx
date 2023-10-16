@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { get, patch } from "axios";
 function EditUser(props) {
   const { id } = useParams();
   const initialState = {
@@ -9,7 +8,8 @@ function EditUser(props) {
     email:"",
     phone:  "",
     role:  "",
-    status:""
+    status:"",
+    password:""
   };
   const [user, setUser] = useState(initialState);
 
@@ -21,13 +21,13 @@ function EditUser(props) {
         try {
           const response = await axios.get(`http://localhost:5273/api/User/${id}`);
           setUser(response.data);
+          console.log(response.data)
         } catch (error) {
           console.log(error);
         }
       }
       updateCrud();
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [props]
   );
 
@@ -35,8 +35,8 @@ function EditUser(props) {
     event.preventDefault();
     async function updateCrud() {
       try {
-        await axios.put(`http://localhost:5273/api/User/${id}`, user);
-        window.location.href = `/user`;
+        await axios.put(`http://localhost:5273/api/User/${id}?Id=${id}&Name=${user.name}&Email=${user.email}&Phone=${user.phone}&Role=${user.role}&Status=${user.status}&Password=${user.password}`);
+        // window.location.href = `/user`;
       } catch (error) {
         console.log(error);
       }
@@ -81,7 +81,9 @@ function EditUser(props) {
                           Full Name
                         </label>
                         <input
-                          name="fname"
+                        id="name"
+                          name="name"
+                          type="string"
                           value={user.name}
                           onChange={handleInputChange}
                           className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
