@@ -145,7 +145,7 @@ export default function TicketEdit(props) {
                     onChange={newData}
                   >
                     <option>Negambo</option>
-                    <option>Kandy</option>
+                    <option>Negambo</option>
                   </select>
                 </div>
                 <div className="mb-4 md:w-1/2 pr-4 pl-4">
@@ -157,8 +157,8 @@ export default function TicketEdit(props) {
                     value={gender}
                     onChange={newData}
                   >
-                    <option value={0}>Colombo</option>
-                    <option value={1}>Galle</option>
+                    <option>Colombo</option>
+                    <option>Galle</option>
                   </select>
                 </div>
               </div>
@@ -206,7 +206,12 @@ export default function TicketEdit(props) {
               <div className="flex flex-wrap  mt-4">
                 <div className="w-1/2">
                   <button
-                    className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline  py-3 px-4 leading-tight text-xl mt-3 custom-dark-blue-button"
+                    className="text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                    style={{
+                      transition: "all .15s ease",
+                      background: "#1B998B",
+                      width: "150px",
+                    }}
                     onClick={() => (window.location = "/tic")}
                   >
                     Cancel
@@ -214,8 +219,12 @@ export default function TicketEdit(props) {
                 </div>
                 <div className="w-1/2" onClick={updateStudent}>
                   <button
-                    className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline  py-3 px-4 leading-tight text-xl mt-3 custom-dark-blue-button"
-                    style={{ maxWidth: "300", height: "80" }}
+                    className="text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                    style={{
+                      transition: "all .15s ease",
+                      background: "#1B998B",
+                      width: "150px",
+                    }}
                     onClick={() => (window.location = "/tic")}
                   >
                     Update

@@ -3,7 +3,7 @@ tr,
 th,
 td {
     border: 3px solid #1B998B;
-    background-color: antiquewhite;
+    background-color: rgb(233, 238, 238);
     border-radius: 100px;
     border-collapse: collapse;
     text-align: center;
@@ -14,7 +14,8 @@ td {
 
 table {
     
-    width: 1200px;
+    width: 1800px;
+    height: 700px;
     margin-top: 60px;
     align-content: center;
     margin-left: 100px;
@@ -26,7 +27,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+
     /* Optional: Fixed background */
     margin: 0;
     /* Remove default margin */
