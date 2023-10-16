@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Users(peoples) {
   useEffect(() => {
     axios
-      .get("http://localhost:5273/api/User")
+      .get("http://localhost:88/api/User")
       .then((response) => {
         setData(response.data);
       })
@@ -21,7 +21,7 @@ export default function Users(peoples) {
     const newStatus = person.status === "Active" ? "Inactive" : "Active";
 
     axios
-      .put(`http://localhost:5273/api/User/${personId}?Id=${personId}&Name=${person.name}&Email=${person.email}&Phone=${person.phone}&Role=${person.role}&Status=${newStatus}&Password=${person.password}`, {
+      .put(`http://localhost:88/api/User/${personId}?Id=${personId}&Name=${person.name}&Email=${person.email}&Phone=${person.phone}&Role=${person.role}&Status=${newStatus}&Password=${person.password}`, {
         status: newStatus,
         name: person.name,
         id: person.id,

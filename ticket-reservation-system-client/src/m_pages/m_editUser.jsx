@@ -19,7 +19,7 @@ function EditUser(props) {
     function () {
       async function updateCrud() {
         try {
-          const response = await axios.get(`http://localhost:5273/api/User/${id}`);
+          const response = await axios.get(`http://localhost:88/api/User/${id}`);
           setUser(response.data);
           console.log(response.data)
         } catch (error) {
@@ -35,8 +35,8 @@ function EditUser(props) {
     event.preventDefault();
     async function updateCrud() {
       try {
-        await axios.put(`http://localhost:5273/api/User/${id}?Id=${id}&Name=${user.name}&Email=${user.email}&Phone=${user.phone}&Role=${user.role}&Status=${user.status}&Password=${user.password}`);
-        // window.location.href = `/user`;
+        await axios.put(`http://localhost:88/api/User/${id}?Id=${id}&Name=${user.name}&Email=${user.email}&Phone=${user.phone}&Role=${user.role}&Status=${user.status}&Password=${user.password}`);
+        window.location.href = `/user`;
       } catch (error) {
         console.log(error);
       }
