@@ -110,7 +110,7 @@ const entry = {
                 </select>
               </div>
               <div className="button-container">
-                <div className="btn cancel" onClick={() => (window.location = "/")}>
+                <div className="btn cancel" onClick={() => (window.location = "/phome")}>
                   Cancel
                 </div>
                 <div className="btn add" onClick={addNewTrain}>

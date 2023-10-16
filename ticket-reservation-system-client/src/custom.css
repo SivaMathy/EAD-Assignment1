@@ -6,10 +6,11 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
+  background-color: white;
 }
 
 table {
-  width: 100%;
+  width: 90%;
   margin-top: 60px;
 }
 
@@ -26,7 +27,7 @@ th {
 
 .header-cell {
   background-color: black; /* Set the header cell background color to black */
-  color: white; /* Set text color to white in header cells */
+
 }
 
 .edit-button {
@@ -50,7 +51,9 @@ th {
 .centered-heading {
   text-align: center; /* Center the text horizontally */
   color: darkblue; /* Set the text color to dark blue */
-  margin-top: 20px; /* Add some top margin to create space */
+  margin-top: 20px; 
+  font-weight: bolder;
+  font-size: larger;/* Add some top margin to create space */
 }
 
 
@@ -60,7 +63,7 @@ th {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
-  margin-top: 50px;
+  
 }
 
 .form-container {
@@ -76,6 +79,8 @@ th {
 h1 {
   text-align: center;
   color: darkblue;
+  font-size: larger;
+  font-weight: bolder;
  
 }
 
