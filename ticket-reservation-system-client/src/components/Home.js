@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import '../trainstyle.css';
 
 export default function Home() 
 {

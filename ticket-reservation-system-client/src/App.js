@@ -17,7 +17,7 @@ import TicketNew from "./T_pages/TicketNew";
 import New from "./components/New";
 import Home from "./components/Home";
 import Edit from "./components/Edit";
-import './custom.css';
+
 
 function App() {
   return (

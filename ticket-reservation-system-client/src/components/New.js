@@ -1,3 +1,5 @@
+import '../trainstyle.css';
+
 const entry = {
   id:"",
   trainName:"",
