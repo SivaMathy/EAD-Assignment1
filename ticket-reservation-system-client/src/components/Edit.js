@@ -1,4 +1,5 @@
 import { useState ,useEffect } from "react";
+import '../trainstyle.css';
 const entry = {
     id:"",
     trainName:"",
