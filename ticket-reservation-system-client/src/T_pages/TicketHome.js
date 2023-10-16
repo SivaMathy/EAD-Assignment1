@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import custom from "../T_pages/custom.css";
+import  "../T_pages/custom.css";
 
 export default function TicketHome() {
   const [students, setStudents] = useState([]);
