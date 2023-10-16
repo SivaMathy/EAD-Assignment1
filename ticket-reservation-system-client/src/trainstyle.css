@@ -1,3 +1,4 @@
+
 table,
 tr,
 th,
@@ -5,11 +6,13 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
+  background-color: white;
 }
 
 table {
-  width: 100%;
-  margin-top: 60px;
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 td {
@@ -25,7 +28,7 @@ th {
 
 .header-cell {
   background-color: black; /* Set the header cell background color to black */
-  color: white; /* Set text color to white in header cells */
+
 }
 
 .edit-button {
@@ -49,7 +52,9 @@ th {
 .centered-heading {
   text-align: center; /* Center the text horizontally */
   color: darkblue; /* Set the text color to dark blue */
-  margin-top: 20px; /* Add some top margin to create space */
+  margin-top: 20px; 
+  font-weight: bolder;
+  font-size: 40px;/* Add some top margin to create space */
 }
 
 
@@ -59,7 +64,7 @@ th {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
-  margin-top: 50px;
+  
 }
 
 .form-container {
@@ -68,13 +73,15 @@ th {
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
 }
 
 h1 {
   text-align: center;
   color: darkblue;
+  font-size: 30px;
+  font-weight: bolder;
  
 }
 
@@ -110,6 +117,7 @@ select {
   cursor: pointer;
   border-radius: 5px;
   margin: 0 5px;
+
 }
 
 .btn.cancel {
@@ -120,6 +128,7 @@ select {
 .btn.delete {
   background-color: #11468F;
   color: white;
+ 
 }
 
 .btn.add {
@@ -130,6 +139,7 @@ select {
   .btn.update {
     background-color: #11468F;
     color: white;
+
   }
 
   
@@ -178,7 +188,7 @@ select {
   .hidden{
     display: none;
   }
-  /* Add Train Button */
+
   .add-train-button {
     display: inline-block;
     background-color: #11468F; /* Dark blue color for the button */

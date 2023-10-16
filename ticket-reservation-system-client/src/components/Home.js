@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import '../trainstyle.css';
 
 export default function Home() 
 {
@@ -75,7 +75,7 @@ const deleteIcon = (
       return;
     }
   }
-    fetch("api/train/" + tid, {
+    fetch("http://localhost:85/api/train/" + tid, {
       method:"DELETE",
       
   }).then(r=> {
@@ -86,7 +86,7 @@ const deleteIcon = (
   }
 
   useEffect(()=> {
-    fetch("api/train", { timeout: 20 }).then(r=> r.json()).then(d=>{
+    fetch("http://localhost:85/api/train", { timeout: 20 }).then(r=> r.json()).then(d=>{
       console.log("The Trains are: ",d)
       setTrains(d)
     }).catch(e=>console.log("The error fetching all trains: ",e))
@@ -97,7 +97,7 @@ const deleteIcon = (
 return (
   <main>
     <h1 className="centered-heading">Schedule Train Details</h1>
-    <a href="/new" className="add-train-button">
+    <a href="/pnew" className="add-train-button">
       <i className="fas fa-plus"></i> Add Train
     </a>
 
@@ -146,7 +146,7 @@ return (
                 </span>
               </td>
               <td>
-                <a href={"/edit?id=" + train.id} className="edit-button">
+                <a href={"/pedit?id=" + train.id} className="edit-button">
                   {editIcon} Edit
                 </a>
               </td>
@@ -178,3 +178,4 @@ return (
    
   }
 
+//updated

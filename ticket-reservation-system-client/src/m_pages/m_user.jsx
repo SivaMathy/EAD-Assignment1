@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function Users(peoples) {
-
   useEffect(() => {
-    axios.get("http://localhost:5273/api/User")
+    axios
+      .get("http://localhost:88/api/User")
       .then((response) => {
         setData(response.data);
       })
@@ -18,31 +18,27 @@ export default function Users(peoples) {
   const [status, setStatus] = useState(peoples.status);
 
   const toggleStatus = (personId, person) => {
-    // Calculate the new status
     const newStatus = person.status === "Active" ? "Inactive" : "Active";
-  
-    // Make an API call to update the status
+
     axios
-      .put(`http://localhost:5273/api/User/${personId}`, {
+      .put(`http://localhost:88/api/User/${personId}?Id=${personId}&Name=${person.name}&Email=${person.email}&Phone=${person.phone}&Role=${person.role}&Status=${newStatus}&Password=${person.password}`, {
         status: newStatus,
         name: person.name,
-        id:person.id,
-        email:person.email,
-        phone:person.phone,
-        password:person.password,
-        role:person.role,
-
+        id: person.id,
+        email: person.email,
+        phone: person.phone,
+        password: person.password,
+        role: person.role,
       })
       .then(() => {
-        // Update the status locally if the API call is successful
         const updatedData = data.map((p) => {
           if (p.id === personId) {
             p.status = newStatus;
-            p.name = person.name; 
-            p.id=person.id;
-            p.email=person.email;
-            p.role=person.role;
-            p.password=person.password;
+            p.name = person.name;
+            p.id = person.id;
+            p.email = person.email;
+            p.role = person.role;
+            p.password = person.password;
           }
           return p;
         });
@@ -55,15 +51,22 @@ export default function Users(peoples) {
 
   return (
     <div style={{ padding: "50px" }}>
-        <div style={{paddingLeft:"500px"}}> <h1 class="mb-4 text-2xl font-extrabold leading-none tracking-tight  md:text-2xl lg:text-6xl ">
-        <span style={{ color: "#1B998B" }}>Manage</span>
-                    <span style={{ color: "#11468F" }}>Users</span></h1></div> 
-      <div className="flex justify-end" style={{alignItems:"end"}}>
-      <a href="/adduser">
-  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" style={{background:"#1B998B"}}>
-  Add new User
-  </button>
-</a>
+      <div style={{ paddingLeft: "500px" }}>
+        {" "}
+        <h1 class="mb-4 text-2xl font-extrabold leading-none tracking-tight  md:text-2xl lg:text-6xl ">
+          <span style={{ color: "#1B998B" }}>Manage</span>
+          <span style={{ color: "#11468F" }}>Users</span>
+        </h1>
+      </div>
+      <div className="flex justify-end" style={{ alignItems: "end" }}>
+        <a href="/adduser">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            style={{ background: "#1B998B" }}
+          >
+            Add new User
+          </button>
+        </a>
       </div>
 
       <div className="flex flex-col" style={{ padding: "50px" }}>
@@ -140,9 +143,7 @@ export default function Users(peoples) {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm text-gray-500">
-                          {person.id}
-                        </div>
+                        <div className="text-sm text-gray-500">{person.id}</div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="text-sm text-gray-500">
@@ -172,33 +173,34 @@ export default function Users(peoples) {
                         {person.phone}
                       </td>
                       <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-500">
-  <label className="relative inline-flex items-center cursor-pointer">
-    <button
-      onClick={() => toggleStatus(person.id, person)}
-      className={`${
-        person.status === "Active"
-          ? "bg-green-400 hover:bg-green-500"
-          : "bg-red-400 hover:bg-red-500"
-      } text-white font-bold py-1 px-2 rounded-full focus:outline-none focus:ring focus:ring-opacity-50`}
-    >
-      <div className="w-8 h-4 rounded-full relative">
-        <div
-          className={`absolute w-4 h-4 rounded-full transition-transform ${
-            person.status === "Active" ? "bg-green-800 transform translate-x-full" : "bg-red-800 transform"
-          }`}
-        ></div>
-      </div>
-    </button>
-  </label>
-</td>
-
+                        <label className="relative inline-flex items-center cursor-pointer">
+                          <button
+                            onClick={() => toggleStatus(person.id, person)}
+                            className={`${
+                              person.status === "Active"
+                                ? "bg-green-400 hover:bg-green-500"
+                                : "bg-red-400 hover:bg-red-500"
+                            } text-white font-bold py-1 px-2 rounded-full focus:outline-none focus:ring focus:ring-opacity-50`}
+                          >
+                            <div className="w-8 h-4 rounded-full relative">
+                              <div
+                                className={`absolute w-4 h-4 rounded-full transition-transform ${
+                                  person.status === "Active"
+                                    ? "bg-green-800 transform translate-x-full"
+                                    : "bg-red-800 transform"
+                                }`}
+                              ></div>
+                            </div>
+                          </button>
+                        </label>
+                      </td>
 
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <Link to={`/editUser/${person.id}`}>
-                            <b>
-                              <small>Edit</small>
-                            </b>
-                          </Link>
+                        <Link to={`/editUser/${person.id}`}>
+                          <b>
+                            <small>Edit</small>
+                          </b>
+                        </Link>
                       </td>
                     </tr>
                   ))}
